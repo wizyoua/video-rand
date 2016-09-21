@@ -1,6 +1,6 @@
 <?php require('elements/header.php'); ?>
 
-<img src="https://cdn3.iconfinder.com/data/icons/media-outline/64/hamburger_nav_navigation_menu-128.png" id="trigger-overlay" type="button" class="menuIcon">Open Overlay</button>
+
 
 
 	<video playsinline  controls poster="" id="mainVideo">
