@@ -11,7 +11,7 @@
 </video>
 
 
-
+<!--If Im seeing this on another computer then git sync works perfectly-->
 
 
 
