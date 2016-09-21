@@ -31,15 +31,23 @@ messagingSenderId: "98446327425"
 };
 firebase.initializeApp(config);
 
+//gets info from log in form
+
+//gets info from sign up form
+//make sure to valdate form
 var email = $("#txtEmail").val();
 var password = $("txtPassword").val();
 var confirmPassword = $("confirmPassword").val();
 var signUp = $("btnSignUp").val();
 var logout = $("btnLogout").val();
 
+//User Signs up event
+signUp.addEventListener('click', e => {
+	promise = auth.createUserWithEmailAndPassword(email,password);
+	promise.catch(e=> console.log(e.message));
+})
 
-
-
+//real time authentication listener
 
 
 
