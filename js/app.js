@@ -49,7 +49,13 @@ signUp.addEventListener('click', e => {
 
 //real time authentication listener
 
-
+firebase.auth().onAuthStateChanged(firebaseUser => {
+	if(firebaseUser){
+		console.log(firebaseUser);
+	}else {
+		console.log('not logged in');
+	}
+});
 
 
 
