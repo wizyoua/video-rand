@@ -42,8 +42,9 @@
         
       </form>
       <ul class="nav navbar-nav navbar-right">
+      	<button type="button" class="btn btn-default navbar-btn" >Sign in</button>
         <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal">Sign in</button>
-        <li  id="trigger-overlay" type="button" class="dropdown">Menu</li>
+        
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

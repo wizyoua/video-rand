@@ -2,6 +2,13 @@
 var app = angular.module('video', []);
 app.controller('registerForm', ['$scope',function($scope) {
  	$scope.registerEmail ="";
+ 	$scope.watch('registerEmail', function(newValue){
+ 		if (newValue.length === 0) {
+ 			console.log('empty');
+ 		}else {
+ 			console.log('has content');
+ 		}
+ 	})
 }]);
 
 
@@ -50,11 +57,7 @@ $(function() {
 Validate Form
 *********************/
 	
-	$('#txtEmail').blur(checkLength());
-
-
-	function checkLength(){
-		var length = $('#txtEmail').val().length;
+	    var length = $('#txtEmail').val().length;
 
 		if (length == 0){
 			console.log("empty");
@@ -66,8 +69,6 @@ Validate Form
 			console.log("password ok");
 			$('.register-form-alert').append("<span class='register-form-alert-success'>Your Emai is OK</span>");
 		}
-
-	}
 	
 
 
@@ -89,21 +90,22 @@ firebase.initializeApp(config);
 
 //gets info from log in form
 
-
-
+const txtEmailLogin = document.getElementById('txtEmailLogin');
+const txtPasswordLogin = document.getElementById('txtPasswordLogin');
+const btnLogin = document.getElementById('btnLogin');
 //gets info from sign up form
 //make sure to valdate form
 const txtEmail = document.getElementById('txtEmail');
 const txtPassword = document.getElementById('txtPassword');
 const btnSignUp = document.getElementById('btnSignUp');
 const btnLogout = document.getElementById('btnLogout');
-const btnLogin = document.getElementById('btnLogin');
+
 
 //user sign in
 btnLogin.addEventListener('click', e => {
 	//grabs email and password
-	const email = txtEmail.value;
-	const pass = txtPassword.value;
+	const email = txtEmailLogin.value;
+	const pass = txtPasswordLogin.value;
 	const auth = firebase.auth();
 	//signs in
 	const promise = auth.signInWithEmailAndPassword(email,pass);

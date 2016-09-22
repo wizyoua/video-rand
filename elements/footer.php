@@ -37,20 +37,18 @@
 							<div class="col-lg-12">
 								<form id="login-form"  method="post" role="form" style="display: block;">
 									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" >
+										<input type="text" name="username" id="txtEmailLogin" tabindex="1" class="form-control" placeholder="Username" >
 										
 									</div>
 									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+										<input type="password" name="password" id="txtPasswordLogin" tabindex="2" class="form-control" placeholder="Password">
 									</div>
-									<div class="form-group text-center">
-										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-										<label for="remember"> Remember Me</label>
-									</div>
+									
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+												<button name="login-submit" id="btnLogin"  class="form-control btn btn-primary" >Log In</button>
+												<button id="btnLogout" class="btn btn-action hide">Log Out</button>
 											</div>
 										</div>
 									</div>
@@ -69,7 +67,7 @@
 									<span class="register-form-alert"></span>
 									<div class="form-group">
 										<input type="email" name="email" id="txtEmail"  class="form-control" placeholder="Email Address"  ng-model="userEmail" required>
-										<span class="register-form-alert-success">{{userEmail}}</span>
+										<span class="register-form-alert-success">{{userEmail.length}}</span>
 									</div>
 
 									<div class="form-group">
@@ -83,10 +81,9 @@
 											<div class="col-sm-6 col-sm-offset-3">
 
 												<button  name="register-submit" id="btnSignUp"  class="form-control btn btn-register" >Sign Up</button>
-												<button name="login-submit" id="btnLogin"  class="form-control btn btn-primary" >Log In</button>
+												
 											</div>
 											<div class="col-sm-6 col-sm-offset-3">
-												<button id="btnLogout" class="btn btn-action hide">Log Out</button>
 											</div>
 										</div>
 									</div>
