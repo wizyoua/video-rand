@@ -62,20 +62,23 @@
 										</div>
 									</div>
 								</form>
-								<form id="register-form" name="registerUser"  style="display: none;">
+								<form id="register-form" name="registerUser"  style="display: none;" novalidate="">
 									
 									<span class="register-form-alert"></span>
 									<div class="form-group">
-										<input type="email" name="email" id="txtEmail"  class="form-control" placeholder="Email Address"  ng-model="userEmail" required>
-										<span class="register-form-alert-success">{{userEmail.length}}</span>
+										<input type="email" name="email" id="txtEmail"  class="form-control" placeholder="Email Address"  ng-model="userEmail" required novalidate>
+										<span class="register-form-alert-success"></span>
+									</div>
+
+										<span class="register-form-alert">{{userPassword.length >=4 ?"Email Ok" : "Password not long enough"}}</span>
+									<div class="form-group">
+										<input type="password" name="password" id="txtPassword" tabindex="2" class="form-control " placeholder="Password" ng-model="userPassword" required ng-class="{ 'has-error': form.password.$invalid && !form.username.$pristine }">
 									</div>
 
 									<div class="form-group">
-										<input type="password" name="password" id="txtPassword" tabindex="2" class="form-control" placeholder="Password" required>
+										<input type="password" name="confirm-password" id="confirmPassword" tabindex="2" class="form-control" placeholder="Confirm Password" ng-class="{ 'has-error': form.confirm-password.$invalid && !form.confirm-password.$pristine }">
 									</div>
-									<!-- <div class="form-group">
-										<input type="password" name="confirm-password" id="confirmPassword" tabindex="2" class="form-control" placeholder="Confirm Password">
-									</div> -->
+									<span ng-show="form.confirmPassword.$error.equal" class="help-block">Password does not match above</span>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
@@ -112,6 +115,7 @@
 
 
 <script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/db/connectDb.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
