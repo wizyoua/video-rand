@@ -131,3 +131,17 @@ video#mainVideo {
 	background-color: #1CA347;
 	border-color: #1CA347;
 }
+
+
+
+
+.register-form-alert {
+	font-size: 15px;
+    font-weight: bold;
+    color: red;
+}
+.register-form-alert-success {
+	font-size: 15px;
+    font-weight: bold;
+    color: green;
+}

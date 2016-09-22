@@ -12,11 +12,7 @@
 
 
 <!--If Im seeing this on another computer then git sync works perfectly-->
-
-
-
-
-
+ 
 
 
 <?php require('elements/footer.php'); ?>

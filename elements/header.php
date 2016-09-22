@@ -11,13 +11,14 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	
 
-
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 	
+
 	<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body >
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->

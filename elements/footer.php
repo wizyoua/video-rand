@@ -12,9 +12,9 @@
 
 
 <!-- User Registration Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-app="video">
   <div class="modal-dialog" role="document">
-    <div class="container">
+    <div class="container"  >
     	<div class="row">
 			<div class="col-md-6 ">
 				<div class="panel panel-login">
@@ -35,9 +35,10 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" action="http://phpoll.com/login/process" method="post" role="form" style="display: block;">
+								<form id="login-form"  method="post" role="form" style="display: block;">
 									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" >
+										
 									</div>
 									<div class="form-group">
 										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
@@ -57,28 +58,32 @@
 										<div class="row">
 											<div class="col-lg-12">
 												<div class="text-center">
-													<a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+													<a  tabindex="5" class="forgot-password">Forgot Password?</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</form>
-								<form id="register-form" action="http://phpoll.com/register/process" method="post" role="form" style="display: none;">
+								<form id="register-form" name="registerUser" >
 									
+									<span class="register-form-alert"></span>
 									<div class="form-group">
-										<input type="email" name="email" id="txtEmail" tabindex="1" class="form-control" placeholder="Email Address" value="">
+										<input type="email" name="email" id="txtEmail"  class="form-control" placeholder="Email Address"  ng-model="userEmail" required>
+										<span class="register-form-alert-success">{{userEmail}}</span>
 									</div>
+
 									<div class="form-group">
-										<input type="password" name="password" id="txtPassword" tabindex="2" class="form-control" placeholder="Password">
+										<input type="password" name="password" id="txtPassword" tabindex="2" class="form-control" placeholder="Password" required>
 									</div>
-									<div class="form-group">
+									<!-- <div class="form-group">
 										<input type="password" name="confirm-password" id="confirmPassword" tabindex="2" class="form-control" placeholder="Confirm Password">
-									</div>
+									</div> -->
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
 
-												<input type="submit" name="register-submit" id="btnSignUp" tabindex="4" class="form-control btn btn-register" value="Register Now">
+												<button  name="register-submit" id="btnSignUp"  class="form-control btn btn-register" >Sign Up</button>
+												<button name="login-submit" id="btnLogin"  class="form-control btn btn-primary" >Log In</button>
 											</div>
 											<div class="col-sm-6 col-sm-offset-3">
 												<button id="btnLogout" class="btn btn-action hide">Log Out</button>
@@ -104,34 +109,6 @@
 
 
 
-<script type="text/javascript">
-	$(function() {
-
-    $('#login-form-link').click(function(e) {
-		$("#login-form").delay(100).fadeIn(100);
- 		$("#register-form").fadeOut(100);
-		$('#register-form-link').removeClass('active');
-		$(this).addClass('active');
-		e.preventDefault();
-	});
-	$('#register-form-link').click(function(e) {
-		$("#register-form").delay(100).fadeIn(100);
- 		$("#login-form").fadeOut(100);
-		$('#login-form-link').removeClass('active');
-		$(this).addClass('active');
-		e.preventDefault();
-	});
-});
-
-</script>
-
-
-
-
-
-
-
-
 
 
 
@@ -140,5 +117,6 @@
 <script type="text/javascript" src="js/app.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </body>
 </html>
