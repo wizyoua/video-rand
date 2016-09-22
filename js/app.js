@@ -1,7 +1,7 @@
 
 var app = angular.module('video', []);
 app.controller('registerForm', ['$scope',function($scope) {
- 	$scope.registerEmail;
+ 	$scope.registerEmail ="";
 }]);
 
 

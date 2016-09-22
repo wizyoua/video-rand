@@ -64,7 +64,7 @@
 										</div>
 									</div>
 								</form>
-								<form id="register-form" name="registerUser" >
+								<form id="register-form" name="registerUser"  style="display: none;">
 									
 									<span class="register-form-alert"></span>
 									<div class="form-group">
