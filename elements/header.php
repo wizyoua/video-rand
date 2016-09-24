@@ -42,8 +42,8 @@
         
       </form>
       <ul class="nav navbar-nav navbar-right">
-      	<button type="button" class="btn btn-default navbar-btn" >Sign in</button>
-        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal">Sign in</button>
+      	<button id="btnLogout" class="btn btn-default navbar-btn hide">Log Out</button>
+        <button id="btnSignIn" type="button" class="btn btn-default navbar-btn " data-toggle="modal" data-target="#registerForm" >Sign in</button>
         
       </ul>
     </div><!-- /.navbar-collapse -->

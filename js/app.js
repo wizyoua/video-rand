@@ -1,15 +1,4 @@
 
-var app = angular.module('video', []);
-app.controller('registerForm', ['$scope',function($scope) {
- 	$scope.registerEmail = $('#txtEmail');
- 	
-}]);
-
-
-
-
-
-
 /*********************
 Video Controllers
 *********************/
@@ -47,23 +36,8 @@ $(function() {
 		e.preventDefault();
 	});
 });
-/*********************
-Validate Form
-*********************/
-	
-	    var length = $('#txtEmail').val().length;
 
-		if (length == 0){
-			console.log("empty");
-			
-		} else if(length < 4){
-			$('.register-form-alert').append("Your email is not formatted properly");
-		}
-		else {
-			console.log("password ok");
-			$('.register-form-alert').append("<span class='register-form-alert-success'>Your Emai is OK</span>");
-		}
-	
+
 
 
 
